@@ -1,0 +1,203 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("public/asset/fonts/helvetica/Helvetica.ttf") format("woff2"), url("public/asset/fonts/helvetica/Helvetica.ttf") format("woff"), url("public/asset/fonts/helvetica/Helvetica.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("public/asset/fonts/helvetica/helvetica-light.ttf") format("woff2"), url("public/asset/fonts/helvetica/helvetica-light.ttf") format("woff"), url("public/asset/fonts/helvetica/helvetica-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("public/asset/fonts/helvetica/Helvetica-Bold.ttf") format("woff2"), url("public/asset/fonts/helvetica/Helvetica-Bold.ttf") format("woff"), url("public/asset/fonts/helvetica/Helvetica-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+}
+
+.toggle-btn {
+  display: none; /* Tombol toggle tersembunyi di layar besar */
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px; /* Pastikan tombol di kanan */
+  top: 20px; /* Pastikan tombol di atas */
+}
+
+.btn-register {
+  width: 81px;
+  height: 36px;
+  gap: 10px;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  background-color: #5cb85f;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#main {
+  width: 1440px;
+  background-color: #f1f3ff;
+}
+
+.btn-start {
+  width: 140px;
+  height: 36px;
+  background-color: #5cb85f;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.container-ourServices {
+  width: 1027px;
+  margin: 0px 207px 0px 206px;
+}
+
+.container-ourServices ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container-ourServices ul li {
+  margin-bottom: 16px;
+}
+
+.container-ourServices ul li img {
+  margin-right: 16px;
+}
+
+.rounded-whyus {
+  width: 268px;
+  height: 196px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  padding: 24px;
+  gap: 16px;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+#testimonialCarousel {
+  background-color: #f1f3ff;
+}
+
+.testimonial-img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  margin-top: 10px;
+  color: black;
+}
+
+.testimonial-text p {
+  color: black;
+  font-size: 16px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  border-radius: 50%;
+  display: none;
+}
+
+.custom-prev-btn {
+  margin-right: 20px;
+}
+
+.custom-next-btn {
+  margin-left: 20px;
+}
+
+.accordion-button {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    right: -250px; /* Sidebar tersembunyi di sebelah kanan */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: right 0.3s ease; /* Smooth transition */
+    gap: 15px;
+    z-index: 1000;
+  }
+
+  .nav-links li a,
+  .btn-register {
+    color: white;
+    padding: 8px 20px;
+    display: block;
+  }
+
+  .toggle-btn {
+    display: block; /* Tampilkan tombol toggle di layar kecil */
+  }
+
+  /* Menampilkan sidebar ketika aktif */
+  .nav-links.active {
+    right: 0; /* Geser sidebar ke tampilan penuh */
+  }
+}
